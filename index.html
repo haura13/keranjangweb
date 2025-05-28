@@ -221,7 +221,7 @@ Di S.Shark_food, kami menggabungkan kreativitas dan rasa untuk memberikan pengal
         <img src="${product.image}" alt="${product.name}" />
         <h2 class="font-semibold">${product.name}</h2>
         <p class="font-semibold">Harga: Rp. ${product.price}</p>
-        <a class="btn" href="https://wa.me/6285891371159?text=${encodeURIComponent('Halo! Saya mau beli produk ' + product.name )}"target="_blank">Beli Sekarang</a>
+        <a class="btn" href="https://wa.me/6285891371159?text=${encodeURIComponent('Halo! Saya mau beli produk ' + product.name +'.Pembayaran Hanya Bisa Lewat COD')}"target="_blank">Beli Sekarang</a>
         <button class="btn" onclick="tambahkeranjang('${product.id}')">Tambah Ke Keranjang</button>`;
         
         productlist.appendChild(divCard);
@@ -284,6 +284,7 @@ Di S.Shark_food, kami menggabungkan kreativitas dan rasa untuk memberikan pengal
             
             let totalHarga = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
             pesan += `\nTotal: Rp.${totalHarga.toLocaleString()}`;
+            pesan += `\n \n*Pembayaran Hanya bisa Lewat COD*`;
             let waLink = `https://wa.me/6285891371159?text=${encodeURIComponent(pesan)}`;
              window.open(waLink, "_blank");
             }
