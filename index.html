@@ -290,7 +290,7 @@ Di S.Shark_food, kami menggabungkan kreativitas dan rasa untuk memberikan pengal
             });
 
             
-            let totalHarga = item.reduce((total, item) => total + (item.price * item.quantity), 0);
+            let totalHarga = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
             pesan += `\nTotal: Rp.${totalHarga.toLocaleString()}`;
             pesan += `\n \n*Pembayaran Hanya bisa Lewat COD*`;
             let waLink = `https://wa.me/6285891371159?text=${encodeURIComponent(pesan)}`;
