@@ -241,7 +241,7 @@ Di S.Shark_food, kami menggabungkan kreativitas dan rasa untuk memberikan pengal
     const cart = [];
 
     function tambahkeranjang(id){
-        let produk_yg_dipilih = product.find(product => product.id == id);
+        let produk_yg_dipilih = product.find(product => product.id === id);
 
         let produk = {
             id : produk_yg_dipilih.id,
@@ -250,7 +250,7 @@ Di S.Shark_food, kami menggabungkan kreativitas dan rasa untuk memberikan pengal
             quantity : 1
         }
 
-        let produk_ada = cart.find (cart => cart.id == id);
+        let produk_ada = cart.find (cart => cart.id === id);
         if (produk_ada){
             produk_ada.quantity += 1;
         } else{
